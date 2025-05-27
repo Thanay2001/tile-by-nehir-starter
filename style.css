@@ -3,12 +3,25 @@
    You'll enhance the layout further using Bootstrap during the LiveLab.
 */
 
+/* High-contrast Bootstrap color scheme */
+:root {
+  --bs-body-bg: #fff;
+  --bs-body-color: #111;
+  --bs-primary: #0056d2;
+  --bs-secondary: #ffd600;
+  --bs-border-color: #222;
+  --bs-link-color: #0056d2;
+  --bs-link-hover-color: #003580;
+}
+
 /* Set a soft textured background for the whole page */
 body {
+  background-color: var(--bs-body-bg);
   background-image: url('assets/offwhite-background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed; /* Parallax effect */
+  color: var(--bs-body-color);
   font-family: sans-serif;
   padding: 16px; /* Adds space around edges on small screens */
 }
@@ -28,6 +41,7 @@ img {
 /* Optional decorative border for each tile */
 .border-tile {
   border: 20px solid transparent;
+  border-color: var(--bs-border-color);
   border-image: url('assets/wood.jpg') 30 round;
   padding: 5px;
   background-color: white;
@@ -39,6 +53,32 @@ img {
   margin-top: 8px;
   font-size: 14px;
   color: #444;
+}
+
+/* Links */
+a {
+  color: var(--bs-link-color);
+}
+
+a:hover {
+  color: var(--bs-link-hover-color);
+}
+
+/* Responsive title for tablet and mobile */
+@media (max-width: 991.98px) { /* Bootstrap md breakpoint */
+  .responsive-title {
+    font-size: 2rem !important;
+    padding: 12px 8px !important;
+    background-color: #e8d9d6 !important;
+    border-radius: 8px !important;
+    text-align: center !important;
+  }
+}
+@media (max-width: 575.98px) { /* Bootstrap xs breakpoint */
+  .responsive-title {
+    font-size: 1.3rem !important;
+    padding: 8px 4px !important;
+  }
 }
 
 /* 💡 Optional Enhancements:

@@ -18,7 +18,7 @@
     <div class="container py-5">
       <!-- Heading styled with Playfair Display font and centered -->
       <h1
-        class="text-center mb-4"
+        class="text-center mb-4 responsive-title"
         style="
           font-family: 'Playfair Display', serif;
           background-color: #e8d9d6;
@@ -27,12 +27,22 @@
         Tile by Nehir
       </h1>
 
-      <!-- Starting state: just images, no Bootstrap grid yet -->
-      <!-- You’ll turn these into responsive tiles during the demo -->
-      <img src="assets/tile1.jpg" alt="Tile print 1" class="mb-3" />
-      <img src="assets/tile2.jpg" alt="Tile print 2" class="mb-3" />
-      <img src="assets/tile3.jpg" alt="Tile print 3" class="mb-3" />
-      <img src="assets/tile4.jpg" alt="Tile print 4" class="mb-3" />
+      <!-- Responsive Bootstrap grid for tile images -->
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+        <div class="col">
+          <img src="assets/tile1.jpg" alt="Tile print 1" class="img-fluid border-tile mb-3 w-100" />
+        </div>
+        <div class="col">
+          <img src="assets/tile2.jpg" alt="Tile print 2" class="img-fluid border-tile mb-3 w-100" />
+        </div>
+        <div class="col">
+          <img src="assets/tile3.jpg" alt="Tile print 3" class="img-fluid border-tile mb-3 w-100" />
+        </div>
+        <div class="col">
+          <img src="assets/tile4.jpg" alt="Tile print 4" class="img-fluid border-tile mb-3 w-100" />
+        </div>
+      </div>
+      <!-- End responsive grid -->
 
       <!-- 💡 Later you'll:
          - Wrap these in Bootstrap grid classes
